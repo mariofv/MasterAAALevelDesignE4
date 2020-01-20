@@ -10,9 +10,12 @@ public class GameController : MonoBehaviour
     public uint diamonds = 0;
     public uint stars = 0;
 
+    public UIController ui;
+
     public void DiamondCollected(GameObject diamond)
     {
         ++diamonds;
+        ui.displayNewDiamond(diamonds);
     }
     public void CoinCollected(GameObject coin)
     {
